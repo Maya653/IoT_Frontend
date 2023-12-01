@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control de Dispositivos IoT</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    #dispositivos {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Control de Dispositivos IoT</h1>
+
+<div id="dispositivos">
+  <h2>Lista de Dispositivos</h2>
+  <ul id="dispositivos-list"></ul>
+</div>
+
+<div id="actualizar">
+  <h2>Actualizar Dispositivo</h2>
+  <label for="valor">Valor:</label>
+  <input type="text" id="valor" placeholder="Ingrese el valor">
+  <button onclick="actualizarDispositivo()">Actualizar</button>
+</div>
+
+<script src="actualizar.js"></script>
+<script src="listar.js"></script>
+
+</body>
+</html>
