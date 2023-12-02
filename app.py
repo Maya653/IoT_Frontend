@@ -1,9 +1,8 @@
-from flask import Flask
-from flask import render_template
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
-@app.route("/",  methods=["GET"])
+@app.route("/", methods=["GET"])
 def index():
     return render_template('index.html')
 
@@ -15,5 +14,5 @@ def led():
 def potenciometro():
     return render_template('potenciometro.html')
 
-if __name__ == '__name__':
+if __name__ == '__main__':
     app.run()

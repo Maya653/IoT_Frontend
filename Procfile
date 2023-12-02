@@ -1,1 +1,1 @@
-web: uvicorn app:app --host 0.0.0.0 --port $PORT
+web: gunicorn -k gevent -w 4 app.py:app
