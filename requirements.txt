@@ -4,3 +4,4 @@ fastapi==0.103.1
 pydantic==2.4.2
 pydantic_core==2.10.1
 flask==2.3.3
+gevent==1.4.0
