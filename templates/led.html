@@ -1,0 +1,61 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dispositivos</title>
+        <script type="text/javascript" src="../static/led.js"></script>
+    </head>        
+
+
+
+
+
+
+    <body>
+        <div id="menu">
+            <h1>Dispositivos</h1>
+        </div>
+
+        <hr>
+
+        <form id="insert-form" name="insert-form">
+            <center>
+                <h1>Led</h1>
+                <hr size="10" color="black">
+                <p>
+                    <input hidden type="text" id="identificador" name="identificador" readonly>
+                </p>
+                <p>
+                    <label for="nombre">Dispositivo:</label>
+                    <input type="text" id="nombre" name="nombre" readonly>
+                </p>
+                <label for="estado">Estado:</label>
+                <input type="checkbox" name="status" id="status">
+                <p>
+                    <button type="button" onclick="updateDispositivo()">Enviar</button>
+                    <a href="/">Regresar</a>
+                </p>
+            </center>
+        </form>
+
+<script>
+    function updateDispositivo() {
+    const identificador = document.getElementById("identificador").value;
+    const nombre = document.getElementById("nombre").value;
+
+    // Obtén el estado del checkbox
+    const estadoCheckbox = document.getElementById("status").checked;
+
+    // Convierte el estado del checkbox a un valor numérico (0 o 1)
+    const estado = estadoCheckbox ? 1 : 0;
+
+    console.log(estado);
+    updateData(identificador, nombre, estado.toString());
+}
+
+</script>
+    </body>
+
+    </html>
