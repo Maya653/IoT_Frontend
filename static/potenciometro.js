@@ -1,8 +1,8 @@
 // Obtén el parámetro 'id' de la URL
 const urlParams = new URLSearchParams(window.location.search);
 const dispositivoId = urlParams.get('identificador');
-const baseUrl = "http://localhost:8000/dispositivo";
-// o const baseUrl = "https://backend-iot-jadc-e65f36ce2ffb.herokuapp.com/dispositivos";
+//const baseUrl = "http://localhost:8000/dispositivo";
+const baseUrl = "https://iot-backen-5cc85ad97e0a.herokuapp.com//dispositivo";
 
 // Función para obtener un solo registro por su ID
 function getDispositivoById(dispositivoId) {
