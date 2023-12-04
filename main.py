@@ -4,7 +4,7 @@ from flas_cors import CORS
 
 app = Flask(__name__)
 
-CORS(app, resources={r"/api/*": {"oringins":[http:oekdpfjgdojksdorja]}})
+CORS(app, resources={r"/api/*": {"oringins":["https://iotfront-b4cb0f781573.herokuapp.com", "https://iot-backen-5cc85ad97e0a.herokuapp.com"]}})
 
 @app.route("/", methods=["GET"])
 def index():
@@ -14,7 +14,7 @@ def index():
 def led():
     return render_template('led.html')
 
-@app.route("/potenciometro", methods=["GET", "PUT"])
+@app.route("/potenciometro", methods=["GET", "POST"])
 def potenciometro():
     return render_template('potenciometro.html')
 
